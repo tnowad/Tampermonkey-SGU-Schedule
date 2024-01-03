@@ -19,7 +19,16 @@
   };
 
   XMLHttpRequest.prototype.send = function(data) {
+    if (this.__zone_symbol__xhrURL === "/api/web/w-locdschucnang") {
+      this.addEventListener('readystatechange', function() {
+        if (this.readyState === 4) {
+          modifyResponse(this);
+        }
+      }, false);
+    }
     originalSend.apply(this, arguments);
   };
+  function modifyResponse(xhr) {
+  }
 })();
 
