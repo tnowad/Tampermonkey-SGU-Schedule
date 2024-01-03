@@ -14,6 +14,7 @@
   const originalSend = XMLHttpRequest.prototype.send;
 
   XMLHttpRequest.prototype.open = function(method, url, async, user, password) {
+    this.__zone_symbol__xhrURL = url;
     originalOpen.apply(this, arguments);
   };
 
