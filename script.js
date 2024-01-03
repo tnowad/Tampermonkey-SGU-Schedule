@@ -10,5 +10,15 @@
 // ==/UserScript==
 
 (function() {
+  const originalOpen = XMLHttpRequest.prototype.open;
+  const originalSend = XMLHttpRequest.prototype.send;
+
+  XMLHttpRequest.prototype.open = function(method, url, async, user, password) {
+    originalOpen.apply(this, arguments);
+  };
+
+  XMLHttpRequest.prototype.send = function(data) {
+    originalSend.apply(this, arguments);
+  };
 })();
 
