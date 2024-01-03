@@ -39,10 +39,10 @@
       "ten_hien_thi": "Xem thời khóa biểu tuần",
       "ten_mobile": {
         "nhom": "view",
-        "ten_viet": "Xem TKB HK",
-        "ten_eng": "Xem TKB HK"
+        "ten_viet": "Xem TKB Tuần",
+        "ten_eng": "Xem TKB Tuần"
       },
-      "ten_hien_thi_Eg": "View Semester schedule",
+      "ten_hien_thi_Eg": "View Weekly schedule",
       "ten_tooltip": "Xem thời khóa biểu tuần",
       "url": "tkb-tuan",
       "ds_chi_tiet": []
