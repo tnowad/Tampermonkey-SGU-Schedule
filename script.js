@@ -28,7 +28,35 @@
     }
     originalSend.apply(this, arguments);
   };
+
   function modifyResponse(xhr) {
+    const response = JSON.parse(xhr.response);
+    response.data.ds_chuc_nang.push({
+      "id": "-Random ID :)))",
+      "ma_chuc_nang": "WEB_TKB_HK",
+      "ma_menu": "1",
+      "thu_tu": 40,
+      "ten_hien_thi": "Xem thời khóa biểu tuần",
+      "ten_mobile": {
+        "nhom": "view",
+        "ten_viet": "Xem TKB HK",
+        "ten_eng": "Xem TKB HK"
+      },
+      "ten_hien_thi_Eg": "View Semester schedule",
+      "ten_tooltip": "Xem thời khóa biểu tuần",
+      "url": "tkb-tuan",
+      "ds_chi_tiet": []
+    });
+
+    const modifiedResponse = JSON.stringify(response);
+    redefineProperty(xhr, 'response', modifiedResponse);
+    redefineProperty(xhr, 'responseText', modifiedResponse);
   }
+
+  function redefineProperty(xhr, property, value) {
+    Object.defineProperty(xhr, property, { writable: true });
+    xhr[property] = value;
+  }
+
 })();
 
