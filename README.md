@@ -1,0 +1,1 @@
+# sgu-enable-week-schedule
