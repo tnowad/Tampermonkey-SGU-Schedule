@@ -31,22 +31,28 @@
 
   function modifyResponse(xhr) {
     const response = JSON.parse(xhr.response);
-    response.data.ds_chuc_nang.push({
-      "id": "-Random ID :)))",
-      "ma_chuc_nang": "WEB_TKB_HK",
+    const features = [{
+      "id": "-5072032565773683271",
+      "ma_chuc_nang": "WEB_TKB_1TUAN",
       "ma_menu": "1",
-      "thu_tu": 40,
+      "thu_tu": 36,
       "ten_hien_thi": "Xem thời khóa biểu tuần",
       "ten_mobile": {
         "nhom": "view",
-        "ten_viet": "Xem TKB Tuần",
-        "ten_eng": "Xem TKB Tuần"
+        "ten_viet": "Xem TKB",
+        "ten_eng": "Xem TKB"
       },
-      "ten_hien_thi_Eg": "View Weekly schedule",
+      "ten_hien_thi_Eg": "View weekly timetable",
       "ten_tooltip": "Xem thời khóa biểu tuần",
       "url": "tkb-tuan",
       "ds_chi_tiet": []
-    });
+    }]
+
+    const uniqueFeatures = features.filter(feature =>
+      !response.data.ds_chuc_nang.some(existingFeature => existingFeature.id === feature.id)
+    );
+
+    response.data.ds_chuc_nang = [...uniqueFeatures, ...response.data.ds_chuc_nang];
 
     const modifiedResponse = JSON.stringify(response);
     redefineProperty(xhr, 'response', modifiedResponse);
