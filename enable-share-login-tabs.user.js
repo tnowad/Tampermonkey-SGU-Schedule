@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      2024-05-11
 // @description  This script allows you to share login sessions between tabs in the same browser window.
-// @author       You
+// @author       github.com/tnowad
 // @match        https://thongtindaotao.sgu.edu.vn/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=edu.vn
 // @grant        none

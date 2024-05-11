@@ -7,6 +7,7 @@
 // @match        https://thongtindaotao.sgu.edu.vn/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=edu.vn
 // @grant        none
+// @run-at       document-start
 // ==/UserScript==
 
 (function () {
