@@ -14,10 +14,12 @@ This Tampermonkey UserScript, named "Enable Feature View Schedule SGU," is desig
 To use this UserScript, you need to have Tampermonkey installed in your web browser. Tampermonkey is a browser extension that allows you to manage and run UserScripts on various websites.
 
 1. **Install Tampermonkey:**
+
    - For Chrome: [Tampermonkey - Chrome Web Store](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
    - For Firefox: [Tampermonkey - Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
 
 2. **Add the UserScript:**
+
    - Click on the Tampermonkey icon in your browser.
    - Choose "Create a new script."
    - Copy and paste the script provided above into the editor.
@@ -36,4 +38,3 @@ This UserScript was created by [tnowad](https://github.com/tnowad).
 This script is provided as-is. Use it at your own risk, and the author is not responsible for any issues that may arise from its usage.
 
 **Note:** This script modifies the behavior of XMLHttpRequest on the specified website to add the "View Weekly Schedule" feature.
-
