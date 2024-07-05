@@ -74,6 +74,22 @@
             ds_chi_tiet: [],
           },
           {
+            id: "-5072032565773683271",
+            ma_chuc_nang: "WEB_TKB_1TUAN",
+            ma_menu: "1",
+            thu_tu: 36,
+            ten_hien_thi: "Xem thời khóa biểu tuần",
+            ten_mobile: {
+              nhom: "view",
+              ten_viet: "Xem TKB",
+              ten_eng: "Xem TKB",
+            },
+            ten_hien_thi_Eg: "View weekly timetable",
+            ten_tooltip: "Xem thời khóa biểu tuần",
+            url: "tkb-tuan",
+            ds_chi_tiet: [],
+          },
+          {
             id: "-6064676023748772916",
             ma_chuc_nang: "WEB_TKB_HK",
             ma_menu: "1",
