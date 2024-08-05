@@ -4,7 +4,7 @@
 // @version      2024-01-03
 // @description  try to take over the world!
 // @author       github.com/tnowad
-// @match        https://thongtindaotao.sgu.edu.vn/
+// @match        https://thongtindaotao.sgu.edu.vn/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=edu.vn
 // @grant        none
 // @run-at       document-start
