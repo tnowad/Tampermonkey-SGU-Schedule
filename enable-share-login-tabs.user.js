@@ -34,8 +34,26 @@
     },
   };
 
+  function sessionStorageDecorator(wrapper) {
+    return {
+      ...wrapper,
+      setItem: function (key, value) {
+        if (key === "CURRENT_USER") {
+          try {
+            let data = JSON.parse(value);
+            data.roles = "GIANGVIEN";
+            value = JSON.stringify(data);
+          } catch (e) {}
+        }
+        wrapper.setItem(key, value);
+      },
+    };
+  }
+
+  const enhancedSessionStorage = sessionStorageDecorator(sessionStorageWrapper);
+
   Object.defineProperty(window, "sessionStorage", {
-    value: sessionStorageWrapper,
+    value: enhancedSessionStorage,
     configurable: false,
     writable: false,
   });
